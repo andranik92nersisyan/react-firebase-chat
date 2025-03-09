@@ -28,11 +28,11 @@ const Login = () => {
 
         try {
 
-            // const signInMethods = await fetchSignInMethodsForEmail(auth, email);
-            // if (signInMethods.length > 0) {
-            //    toast.error("This email is already in use. Try logging in.");
-            //    return;
-            // }
+            const signInMethods = await fetchSignInMethodsForEmail(auth, email);
+            if (signInMethods.length > 0) {
+               toast.error("This email is already in use. Try logging in.");
+               return;
+            }
 
             const res = await createUserWithEmailAndPassword(auth, email, password);
             
