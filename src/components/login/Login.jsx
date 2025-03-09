@@ -35,8 +35,6 @@ const Login = () => {
             //    return;
             // }
 
-
-
             const res = await createUserWithEmailAndPassword(auth, email, password);
             
             // const imgUrl = await upload(avatar.file);  
