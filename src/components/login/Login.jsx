@@ -12,6 +12,7 @@ const Login = () => {
     url: ""
    });
 
+    const handleAvatar = (e) => {
         if (e.target.files[0]) {
             setAvatar({
                file: e.target.files[0],
@@ -91,6 +92,6 @@ const Login = () => {
             </div>
         </div>
     );
-
+};
 
 export default Login;
